@@ -1,0 +1,43 @@
+uildscript {
+	ext {
+		springBootVersion = '2.1.1.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+
+
+
+group = 'com.acdc'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+
+dependencies {
+
+//Importent libraries 
+// Add other dependencies required by your application
+
+        // https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+        compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+ 
+       compile 'org.neo4j.driver:neo4j-java-driver:4.0.0'
+      // https://mvnrepository.com/artifact/org.neo4j/neo4j
+      compile group: 'org.neo4j', name: 'neo4j', version: '3.4.6'
+}       
+ 
